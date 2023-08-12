@@ -28,6 +28,8 @@ public class Transaction
 			String name = scanner.nextLine(); 
 			System.out.println("hasOpenComplianceIssues: "+transactionDataFetcher.hasOpenComplianceIssues(name));
 			Map<String, List<TransactionDto>> transactionMap=transactionDataFetcher.getTransactionsByBeneficiaryName();
+			
+			System.out.println("Transaction Map Size:"+ transactionMap.size());
 			System.out.println("getUnsolvedIssueIds: "+transactionDataFetcher.getUnsolvedIssueIds().toString());
 			System.out.println("getAllSolvedIssueMessages: "+transactionDataFetcher.getAllSolvedIssueMessages().toString());
 			List<TransactionDto> transactions=transactionDataFetcher.getTop3TransactionsByAmount();
@@ -39,7 +41,7 @@ public class Transaction
 			senderFullName.ifPresent(s -> System.out.println("getTopSender:"+s));
 		}catch(Exception e) 
 		{
-			e.printStackTrace();
+			e.getMessage();
 		}
     	
     }

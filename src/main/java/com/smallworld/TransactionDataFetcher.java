@@ -44,9 +44,6 @@ public class TransactionDataFetcher {
 	        e.printStackTrace();
 	    }
 	}
-	
-    
-	
 
     public double getTotalTransactionAmount()
     {
